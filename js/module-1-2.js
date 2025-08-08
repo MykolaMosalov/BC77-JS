@@ -21,7 +21,21 @@ function getRandomNumber(min, max) {
 // ? Напиши функцію, яка буде виводити найменьше число
 
 function findSmallNumber(a, b, c, d, e) {
-  return Math.min(a, b, c, d, e)
+  return Math.min(a, b, c, d, e);
 }
 // console.log(findSmallNumber(10, 8, 2, 4, 9));
 // console.log(findSmallNumber(12, 7, 3, 8, 9));
+
+// ? Напиши функцію, яка буде перевіряти пароль у користувача. Запроси пароль у користувача через promt
+const userPassword = prompt("Enter your password");
+const userPassword2 = prompt("Enter your password");
+
+function passwordVerification(password) {
+  const origenalPasseord = "admin";
+  return origenalPasseord === password;
+}
+
+// console.log(passwordVerification(userPassword));
+// console.log(passwordVerification(userPassword2));
+// console.log(passwordVerification("test"));
+// console.log(passwordVerification("12345"));
