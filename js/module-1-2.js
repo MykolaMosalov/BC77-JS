@@ -42,13 +42,13 @@ function passwordVerification(password) {
 
 // ? Напишіть функцію яка приймає наступні параменти userName з ім’ям користувача і payment з сумою до оплати. Функція повинна допомогою шаблонного рядка вивести через alert повідомлення: «Дякуємо, Олександро! До сплати 300 гривень».
 
-const userName = prompt ("Enter your name")
-const price = prompt ("Paste a price")
+// const userName = prompt ("Enter your name")
+// const price = prompt ("Paste a price")
 
 function showUserMessage (name, payment) {
   
 alert(`Дякуємо, ${name}! До сплати ${payment} гривень`)
 }
 
-console.log(showUserMessage(userName, price));
+// console.log(showUserMessage(userName, price));
 // console.log(showUserMessage("Микола", 500));
