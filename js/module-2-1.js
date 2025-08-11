@@ -88,3 +88,23 @@ function checkRangeNumber(num) {
 }
 // const value = checkRangeNumber(number);
 // alert(value);
+
+//TODO:============task-4=========================
+// Є 3 вікові групи : діти (0-16), дорослі(17-60), пенсіонери (61-100).
+// До якої групи відноситься Максим, якщо йому 55 років.Назву групи вивести на екран.
+
+const ageMaksim = 55;
+
+function checkAge(age) {
+  if (ageMaksim > 0 && ageMaksim <= 16) {
+    return "kids";
+  } else if (ageMaksim > 16 && ageMaksim <= 60) {
+    return "adult";
+  } else if (ageMaksim > 60 && ageMaksim < 100) {
+    return "old";
+  } else {
+    return "error";
+  }
+}
+
+console.log(checkAge(20));
