@@ -65,3 +65,26 @@ function checkFullName(a, b) {
 
 // console.log(checkFullName(userName, lastName));
 // console.log(checkFullName("Mango", "Petro"));
+
+//TODO:============task-3=========================
+// Написати скрипт, який перевіряє чи введене число через prompt потрапляє в діапазон від 55 до 99 включно.
+// Якщо так, вивести в консоль "Число потрапляє в діапазон".
+// Якщо ні, вивести в консоль "Число не потрапляє в діапазон".
+
+// const number = prompt("Enter a number");
+
+// if (number >= 55 && number <= 99) {
+//   alert("Число потрапляє в діапазон");
+// } else {
+//   alert("Число не потрапляє в діапазон");
+// }
+// alert(number);
+
+function checkRangeNumber(num) {
+  if (number >= 55 && number <= 99) {
+    return "Число потрапляє в діапазон";
+  }
+  return "Число не потрапляє в діапазон";
+}
+// const value = checkRangeNumber(number);
+// alert(value);
