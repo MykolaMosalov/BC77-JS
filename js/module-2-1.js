@@ -107,4 +107,46 @@ function checkAge(age) {
   }
 }
 
-console.log(checkAge(20));
+// console.log(checkAge(20));
+
+//TODO:============task-6=========================
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch
+
+const drink = prompt("Enter your drink").toLowerCase();
+
+function orderDrink(nameDrink) {
+  let res = null;
+
+  switch (nameDrink) {
+    case "coffe":
+      res = 80;
+      break;
+
+    case "tea":
+      res = 40;
+      break;
+
+    case "juce":
+      res = 50;
+      break;
+
+    default:
+      return "error";
+  }
+  return `Thank you for your order, total price: ${res} uah`;
+
+  //   case "coffe":
+  //     return "Thank you for your order, total price: 80 uah";
+
+  //   case "tea":
+  //     return "Thank you for your order, total price: 40 uah";
+
+  //   case "juce":
+  //     return "Thank you for your order, total price: 50 uah";
+
+  //   default:
+  //     return "error";
+  // }
+}
+alert(orderDrink(drink));
