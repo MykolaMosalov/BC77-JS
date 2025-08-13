@@ -22,3 +22,42 @@ const res = message.toLowerCase().split(" ").join("-");
 // console.log(res);
 const wordCount = message.split(" ").length;
 // console.log(wordCount);
+
+//TODO:=========task-3=================
+// Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." Результат повинен бути розділений комами та пробілами.(використати indexOf)
+
+const wordsArray = ["JavaScript", "HTML", "CSS", "React"];
+const substring = "S";
+// console.log("J-0 a-1 v-2 a-3 S-4 cript".indexOf("W"));
+const filteredArray = [];
+
+// for (const element of wordsArray) {
+//   if (element.includes(substring)) {
+//     filteredArray.push(element);
+//   }
+// }
+// console.log(filteredArray);
+
+// for (const element of wordsArray) {
+//   // if (element.indexOf(substring) !== -1) {    // ("JavaScript".indexOf("S") = -1) !== (-1)
+//   //   filteredArray.push(element); // filteredArray.push("JavaScript") = > filteredArray = ["JavaScript"]
+//   // }
+//   console.log("Початок ітерації циклу");
+//   console.log(
+//     `Ітерація циклу ${wordsArray.indexOf(element)} дає елемент ${element}`
+//   );
+
+//   if (element.indexOf(substring) === -1) {
+//     console.log("Спрацювала умова");
+//     continue;
+//   }
+
+//   filteredArray.push(element);
+//   console.log("Кінець ітерації циклу");
+// }
+
+// console.log(
+//   `Масив елементів, що містять підстроку substring: ${substring} - ${
+//     filteredArray.join(", ") || "Відсутня"
+//   }`
+// );
