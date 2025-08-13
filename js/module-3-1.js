@@ -61,3 +61,20 @@ const filteredArray = [];
 //     filteredArray.join(", ") || "Відсутня"
 //   }`
 // );
+//TODO:=========task-4=================
+// Створити масив з 10-ти чисел. Напиши функцію яуа буде шукати найбільше число.
+
+function findMaxNumber(arr) {
+  let maxNumber = arr[0];
+  for (const number of arr) {
+    if (number > maxNumber) {
+      maxNumber = number;
+    }
+  }
+  return maxNumber;
+}
+
+console.log(findMaxNumber(numbersArray));
+
+const numbersArray = [1, 0, 5, 46, 23, 15, 4, 800, 7];
+findMaxNumber(numbersArray);
