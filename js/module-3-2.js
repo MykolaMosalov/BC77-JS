@@ -60,3 +60,23 @@
 
 // console.log(someAirFunction(someArr));
 // // console.log(someArr[2] + someArr[1]);
+
+//TODO:=========task-04=================
+//Напишіть функцію calculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+
+function calculateAverage() {
+  let total = 0;
+  let count = 0;
+  for (const number of arguments) {
+    if (typeof number === 'number') {
+      total += number;
+
+      count += 1;
+    }
+  }
+  return total / count;
+}
+console.log(calculateAverage(10, 15, 20, 25, 35, 'hello'));
