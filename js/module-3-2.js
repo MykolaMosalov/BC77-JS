@@ -21,3 +21,24 @@
 // }
 
 // console.log(findSmallerNumber(numbersArr));
+
+//TODO:============task-02==============
+// Напишіть функцію min(a, b), яка повертає
+// менше з чисел a, b
+// Потрібно додати перевірку, що функція отримує числа
+
+// const min = 3;
+// const max = 8;
+
+// function minNumber(a, b) {
+//   if (typeof a !== "number" || typeof b !== "number") {
+//     return "Params is not a number";
+//   }
+//   //   if (a < b) {
+//   //     return a;
+//   //   } else {
+//   //     return b;
+//   //   }
+//   return Math.min(a, b);
+// }
+// console.log(minNumber(min, max));
