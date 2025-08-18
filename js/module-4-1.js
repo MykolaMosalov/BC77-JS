@@ -42,3 +42,31 @@ const human = {
 // }
 
 // console.log(getBool(human, "age"));
+
+//TODO:============task-3======================================================
+// У нас є об'єкт, у якому зберігатимуться зарплати
+// нашої команди
+// Напишіть код для сумування всіх зарплат і
+// збережіть його результат у змінній sum.
+// Якщо об'єкт salaries порожній, то результат має бути 0
+
+const salaries = {
+  tolia: 1500,
+  anton: 3000,
+  taras: 4000,
+};
+
+let sumSalries = 0;
+
+// for (const key in salaries) {
+//   if (salaries.hasOwnProperty(key)) {
+//     sumSalries += salaries[key];
+//   }
+// }
+
+const arrayValues = Object.values(salaries);
+
+for (const number of arrayValues) {
+  sumSalries += number;
+}
+console.log(sumSalries);
