@@ -11,7 +11,7 @@
    комітами)
 1. `git checkout -b "branchName"` - творюємо гілку з назвою "branchName" і
    переходимо на неї
-1. `git checkout "branchName"` - переходить на гілку з назвою "branchName"
+1. ` git checkout"branchName"` - переходить на гілку з назвою "branchName"
 1. `git clone ...` - Клонує існуючий репозиторій GIT на локальну машину.
 1. `git commit -m "commit message"` - підписуємо збереженні зміни в файлах
 1. `git log` - показує історію комітів
@@ -53,4 +53,3 @@
 - `(mkdir имя ) создание папки`
 
 ---
-
