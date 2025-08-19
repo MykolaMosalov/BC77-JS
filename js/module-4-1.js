@@ -64,9 +64,41 @@ let sumSalries = 0;
 //   }
 // }
 
-const arrayValues = Object.values(salaries);
+// const arrayValues = Object.values(salaries);
 
-for (const number of arrayValues) {
-  sumSalries += number;
+// for (const number of arrayValues) {
+//   sumSalries += number;
+// }
+// console.log(sumSalries);
+
+// Створіть функцію multiplyNumeric(obj),
+// яка множить всі числові властивості об'єкта obj на 2.
+
+// до виклику функції
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'My menu',
+// };
+
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu",
+};
+console.log(typeof menu);
+function multiplyNumeric(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] === "number") {
+      obj[key] *= 2;
+    }
+  }
+  return obj;
 }
-console.log(sumSalries);
+
+console.log(typeof "String");
+// menu = {
+//   width: 400,
+//   height: 600,
+//   title: 'My menu',
+// };
