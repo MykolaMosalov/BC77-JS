@@ -11,3 +11,23 @@ const rectangle = {
   },
 };
 // console.log(rectangle.calculateArea());
+
+//TODO:============task-2==============================================
+// 4. Створіть об'єкт "кошик" зі списком товарів та їх цін. Напишіть метод "calculateTotal", який буде обчислювати загальну суму товарів у кошику.
+
+const cart = {
+  productsList: [
+    { name: 'phone', price: 20000 },
+    { name: 'tablet', price: 28000 },
+  ],
+
+  calculateTotal() {
+    let totalSum = 0;
+    for (const product of this.productsList) {
+      totalSum += product.price;
+    }
+    return `Сума до сплати ${totalSum}`;
+  },
+};
+
+console.log(cart.calculateTotal());
