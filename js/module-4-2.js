@@ -74,3 +74,30 @@ const rectangle = {
 
 // console.log(nikita.deposite(7000));
 // console.log(nikita.withdraw(5000));
+
+// * Операції spread і rest
+//TODO:============task-1=========================
+// Припустимо, є два масиви об'єктів:
+// Необхідно створити новий масив об'єктів, що буде містити всі об'єкти з обох масивів, але без дублів.
+// Тобто об'єкти з однаковим значенням ключа "id" повинні бути об'єднані в один об'єкт.
+
+const arr1 = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Mary" },
+  { id: 3, name: "John" },
+];
+
+const arr2 = [
+  { id: 2, name: "Mary" },
+  { id: 4, name: "Jane" },
+  { id: 5, name: "Tom" },
+];
+const arr3 = [...arr1, ...arr2];
+
+const newObj = {};
+// newObj["1"] = { id: 1, name: "John" };
+for (const item of arr3) {
+  newObj[item.id] = item;
+}
+// console.log(newObj);
+// console.log(Object.values(newObj));
