@@ -101,3 +101,17 @@ for (const item of arr3) {
 }
 // console.log(newObj);
 // console.log(Object.values(newObj));
+
+//TODO:============task-2=========================
+// Напишіть функцію updateObject, яка приймає об'єкт та повертає
+// новий об'єкт без зазначених параметрів
+// Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
+
+function updateObject(obj, ...args) {
+  const newObj = { ...obj };
+  for (const element of args) {
+    delete newObj[element];
+  }
+  return newObj;
+}
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "a"));
