@@ -44,7 +44,32 @@
 //TODO:=========task-07=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
-const numbers = [4, 2, 5, 1, 3];
+// const numbers = [4, 2, 5, 1, 3];
 
-const result = numbers.toSorted((b, a) => a - b);
-console.log(result);
+// const result = numbers.toSorted((b, a) => a - b);
+// console.log(result);
+
+//TODO:===============task-08===============================
+// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
+
+// const stringArray = ['banana', 'orange', 'apple', 'pear'];
+
+// const res = stringArray.toSorted((a, b) => {
+//   return a.localeCompare(b);
+// });
+// console.log(res);
+
+//TODO:=========task-10=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
+
+const user = [
+  { name: 'John', age: 27 },
+  { name: 'Jane', age: 31 },
+  { name: 'Bob', age: 19 },
+];
+
+const res = user.filter(el => {
+  return el.age > 20;
+});
+
+console.log(res);
