@@ -21,14 +21,30 @@
 //TODO:=========task-03=================
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Перевірте, чи є хоча б один об'єкт з віком менше 20 років. Очікуваний результат: true.
 
-const people = [
-  { name: "John", age: 11 },
-  { name: "Jane", age: 15 },
-  { name: "Bob", age: 19 },
-];
+// const people = [
+//   { name: "John", age: 11 },
+//   { name: "Jane", age: 15 },
+//   { name: "Bob", age: 19 },
+// ];
 
-// const res = people.some((el, indx, array) => el.age < 20);
+// // const res = people.some((el, indx, array) => el.age < 20);
+// // console.log(res);
+
+// const res = people.every((el, indx, array) => el.age < 20);
 // console.log(res);
 
-const res = people.every((el, indx, array) => el.age < 20);
-console.log(res);
+//TODO:=========task-04=================
+// Знайдіть перше непарне число
+
+// const numbers = [2, 1, 6, 8, 9, 10, 12];
+
+// const firstOddNumber = numbers.find((number) => number % 2 !== 0);
+// console.log(firstOddNumber);
+
+//TODO:=========task-07=================
+// Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+
+const numbers = [4, 2, 5, 1, 3];
+
+const result = numbers.toSorted((b, a) => a - b);
+console.log(result);
