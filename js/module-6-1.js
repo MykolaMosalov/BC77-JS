@@ -83,3 +83,31 @@ const obj = {
 // console.log(obj);
 // user.showUser.call(obj);
 // user.showUser();
+
+//TODO:=========task-05=================
+//  Викличте функцію showFullName у контексті об'єкта user
+
+function showFullName(a, b) {
+  console.log(`${a} ${this.userName}`, b);
+}
+
+// showFullName.apply(obj, ["Hello", 10]);
+// showFullName.call(user, "Bay", 20);
+
+//TODO:=========task-06=================
+// Виправте помилки, щоб код працював
+
+const product = {
+  price: 5000,
+
+  showPrice() {
+    console.log(this.price);
+  },
+};
+
+function callAction(callback, context) {
+  callback.call(context);
+}
+
+// callAction(product.showPrice.bind(product));
+// callAction(product.showPrice, product);
