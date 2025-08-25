@@ -41,26 +41,26 @@
 //   this[key] = value;
 // }
 
-// const user = {
-//   userName: "Roman",
-//   lastName: "Knyazhyk",
-//   age: 32,
-//   email: "romanknyazhyk@gmail.com",
+const user = {
+  userName: "Roman",
+  lastName: "Knyazhyk",
+  age: 32,
+  email: "romanknyazhyk@gmail.com",
 
-//   showUser() {
-//     console.log(`Hello ${this.userName}! Youre are ${this.age} old. `);
-//   },
+  showUser() {
+    console.log(`Hello ${this.userName}! Youre are ${this.age} old. `);
+  },
 
-//   modifyUser(key, value) {
-//     if (key !== "userName" && key !== "lastName") {
-//       return "Key`s are not valid";
-//     }
+  modifyUser(key, value) {
+    if (key !== "userName" && key !== "lastName") {
+      return "Key`s are not valid";
+    }
 
-//     if (value[0] === value[0].toUpperCase() && value.length >= 3) {
-//       this[key] = value;
-//     }
-//   },
-// };
+    if (value[0] === value[0].toUpperCase() && value.length >= 3) {
+      this[key] = value;
+    }
+  },
+};
 // user.addProperty = addProperty;
 // user.addProperty("friends", ["mango", "bob"]);
 // user.addProperty("hobby", "footbal");
@@ -70,3 +70,16 @@
 // newUser.addProperty = addProperty;
 // newUser.addProperty("username", "Roman");
 // console.log(newUser);
+
+//TODO:=========task-04=================
+//  Викликати метод user.showUser() таким чином, щоб він вивів результатом  ({name: 'Bob', lastName: 'Lasso',age: 50, email: 'BodLasso@gmail.com'})
+// const obj = Object.create(user);
+const obj = {
+  userName: "Bob",
+  lastName: "Lasso",
+  age: 50,
+  email: "BodLasso@gmail.com",
+};
+// console.log(obj);
+// user.showUser.call(obj);
+// user.showUser();
