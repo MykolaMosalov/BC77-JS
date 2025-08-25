@@ -63,13 +63,25 @@
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
 const user = [
-  { name: 'John', age: 27 },
-  { name: 'Jane', age: 31 },
-  { name: 'Bob', age: 19 },
+  { name: "John", age: 27 },
+  { name: "Jane", age: 31 },
+  { name: "Bob", age: 19 },
 ];
 
-const res = user.filter(el => {
-  return el.age > 20;
-});
+// const res = user.filter((el) => {
+//   return el.age > 20;
+// });
 
-console.log(res);
+// console.log(res);
+//TODO:=========task-11=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
+
+const numbers = [1, 2, 3, 4, 5];
+// const res = numbers.reduce((acc, el) => acc + el, 0);
+// console.log(res);
+
+//TODO:=========task-12=================
+// У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
+
+// const res = numbers.reduce((acc, el, _, arr) => acc + el / arr.length, 0);
+// console.log(res);
