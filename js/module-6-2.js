@@ -51,3 +51,34 @@
 // calculator.number(10);
 // calculator.divide(2);
 // console.log(calculator.getResult());
+//! Приватні властивості
+//TODO:=========task-02=================
+/**
+ * Напиши клас Client який створює об'єкт з ​​властивостями login email.
+ *
+ * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
+ */
+// class Client {
+//     #login;
+//     #email;
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
+//     get email() {
+//         return this.#email;
+//     }
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+//      get login() {
+//         return this.#login;
+//     }
+//     set login(newLogin) {
+//         this.#login = newLogin;
+//     }
+// }
+
+// const client = new Client("admin", "ad@gmail.com");
+// client.login = "1234"
+// console.log(client);
