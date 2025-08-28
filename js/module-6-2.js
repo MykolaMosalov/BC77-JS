@@ -82,3 +82,74 @@
 // const client = new Client("admin", "ad@gmail.com");
 // client.login = "1234"
 // console.log(client);
+
+//TODO:=========task-03=================
+/**
+  |============Person================
+  | Cтворіть клас `Person`, який містить наступні властивості:
+  |  - `name` - ім'я людини;
+  |  - `age`- вік людини;
+  |  - `gender` - стать людини;
+  |  - `email`- електронна пошта людини.
+  |
+  | ##### Крім того, клас `Person` має мати метод `getDetails()`, який повертає об'єкт з ім'ям, віком, статтю та електронною поштою людини.
+  |============================
+*/
+/**
+  |=============Employee===============
+  |Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+  |  - salary - зарплата співробітника;
+  |  - department - відділ, в якому працює співробітник.
+  |  ##### Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника, зарплатою та відділом, в якому працює співробітник.
+  |============================
+*/
+
+// class Person {
+//   constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
+
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
+
+// const person = new Person("Arthur", 24, "male", "arthur@mail.com");
+// console.log(person);
+
+// class Employee extends Person {
+//   constructor(name, age, gender, email, salary, department, hobby) {
+//     super(name, age, gender, email);
+//     this.salary = salary;
+//     this.department = department;
+//     this.hobby = hobby;
+//   }
+
+//   getEmployeeDetails() {
+//     return {
+//       ...this.getDetails(),
+//       salary: this.salary,
+//       department: this.department,
+//       hobby: this.hobby,
+//     };
+//   }
+// }
+
+// const worker = new Employee(
+//   "Nikita",
+//   30,
+//   "male",
+//   "Nikita@gmail.com",
+//   600,
+//   "it",
+//   "gambling"
+// );
+// console.log(worker.getEmployeeDetails());
