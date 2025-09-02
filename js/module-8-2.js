@@ -14,9 +14,14 @@
   
 */
 
-/**
-  |============Розмітка для модального вікна================
-  <div class="modal">
+const modalBtnEl = document.querySelector(".js-modal-open");
+console.log(modalBtnEl);
+
+modalBtnEl.addEventListener("click", onModalBtnClick);
+
+function onModalBtnClick(event) {
+  const modal = basicLightbox.create(`
+     <div class="modal">
   <button type="button" class="close-btn js-modal-close">
     X
   </button>
@@ -43,8 +48,26 @@
     </button>
   </form>
 </div>
-  |============================
-*/
+`);
+
+  modal.show();
+  document.addEventListener("keydown", onEscClick);
+  const crossEl = document.querySelector(".js-modal-close");
+  crossEl.addEventListener("click", onCrossClick);
+
+  function onCrossClick(event) {
+    modal.close();
+    document.removeEventListener("click", onCrossClick);
+  }
+
+  function onEscClick(event) {
+    if (event.code !== "Escape") {
+      return;
+    }
+    modal.close();
+    document.removeEventListener("keydown", onEscClick);
+  }
+}
 
 /**
   |============================
