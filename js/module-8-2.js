@@ -53,7 +53,9 @@ function onModalBtnClick(event) {
   modal.show();
   document.addEventListener("keydown", onEscClick);
   const crossEl = document.querySelector(".js-modal-close");
+  const formEl = document.querySelector(".js-modal__form");
   crossEl.addEventListener("click", onCrossClick);
+  formEl.addEventListener("submit", onSubmit);
 
   function onCrossClick(event) {
     modal.close();
@@ -66,6 +68,27 @@ function onModalBtnClick(event) {
     }
     modal.close();
     document.removeEventListener("keydown", onEscClick);
+  }
+
+  function onSubmit(event) {
+    event.preventDefault();
+    const { name, email, password } = event.currentTarget.elements;
+    if (
+      name.value.trim() === "" ||
+      email.value.trim() === "" ||
+      password.value.trim() === ""
+    ) {
+      alert("email or password is empty");
+      return;
+    }
+    const data = {
+      userName: name.value.trim(),
+      userEmail: email.value.trim(),
+      userPassword: password.value.trim(),
+    };
+    console.log(data);
+    event.currentTarget.reset();
+    modal.close();
   }
 }
 
