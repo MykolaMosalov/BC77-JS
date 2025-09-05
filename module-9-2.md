@@ -44,15 +44,7 @@
 #### 1.1. Створіть файл transactions.js який містить в собі масив об'єктів витрат користувача. Зробіть дефолтний експорт з цього файла аби даними можна було користуватися в інших файлах.
 
 ```js
-const expenses = [
-  { category: 'Їжа', amount: 100 },
-  { category: 'Їжа', amount: 25 },
-  { category: 'Транспорт', amount: 50 },
-  { category: 'Їжа', amount: 75 },
-  { category: 'Розваги', amount: 25 },
-  { category: 'Розваги', amount: 75 },
-  { category: 'Аптека', amount: 95 },
-];
+
 ```
 
 #### 1.2. Створіть файл expenses.js, який містить наступні функції і одразу експортуйте їх іменованим експортом:
@@ -69,7 +61,7 @@ const expenses = [
 const totalExpenses = calculateTotalExpenses(expenses);
 console.log(`Загальна сума витрат: ${totalExpenses}`);
 
-const foodExpenses = getExpensesByCategory(expenses, 'Їжа');
+const foodExpenses = getExpensesByCategory(expenses, "Їжа");
 console.log(`Витрати на їжу: ${calculateTotalExpenses(foodExpenses)}`);
 ```
 
