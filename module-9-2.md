@@ -58,11 +58,7 @@
 #### 1.3. Створіть третій файл app.js, який імпортує функції з expenses.js і масив expenses та використовує їх для відображення загальної суми витрат та списку витрат за категорією. У файлі також є список витрат, які були здійснені користувачем
 
 ```js
-const totalExpenses = calculateTotalExpenses(expenses);
-console.log(`Загальна сума витрат: ${totalExpenses}`);
 
-const foodExpenses = getExpensesByCategory(expenses, "Їжа");
-console.log(`Витрати на їжу: ${calculateTotalExpenses(foodExpenses)}`);
 ```
 
 #### 1.4. Додайте у розмітку елемент Select, створіть для нього стільки елементів Option, скільки існує категорій у масиві expense. Додайте функціонал, що дозволить при зміні категорії виводити інформацію про витрати за обраною категорією
