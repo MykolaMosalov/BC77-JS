@@ -79,3 +79,35 @@ Promise.all([getNewData(), getData(), getLastData(), getAnotherData()]).then(
     // console.log(responce);
   }
 );
+
+//TODO:====================03==========================
+/**
+ * Функція countWithDelay приймає приймає 3 аргументи:
+ * 1) кількість секунд перед тим як спрацює ф-ція logCount
+ * 2) скільки разів має відпрацювати logCount
+ * 3) затримка між викликами ф-ції
+ *
+ * logCount повинна логувати кількість викликів
+ */
+
+function countWithDelay(delay, times, interval) {
+  let count = 0;
+  function logCount() {
+    if (count === times) {
+      return;
+    }
+    count += 1;
+    setTimeout(logCount, interval);
+    console.log(count);
+  }
+
+  creatPromise(delay, logCount);
+}
+
+function creatPromise(delay, callback) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(), delay);
+  }).then((resolve) => callback());
+}
+
+countWithDelay(1000, 5, 3000);
