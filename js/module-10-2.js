@@ -110,4 +110,33 @@ function creatPromise(delay, callback) {
   }).then((resolve) => callback());
 }
 
-countWithDelay(1000, 5, 3000);
+// countWithDelay(1000, 5, 3000);
+
+//TODO:====================04==========================
+/**
+ * - Використовуй prompt і повертай значення звідти.
+ * - Створи функцію, всередині якої буде проміс.
+ * Якщо значення не є числом, відхиляй проміс і логіруй "error".
+ * Якщо значення парне, вирішуй проміс і повертай "even" через 1 секунду.
+ * Якщо значення не парне, вирішуй проміс і повертай "odd" через 2 секунди.
+ */
+
+const value = prompt("paste value");
+
+function checkValue(value) {
+  return new Promise((resolve, reject) => {
+    if (isNaN(value)) {
+      return reject("error");
+    }
+    if (value % 2 === 0) {
+      setTimeout(() => {
+        return resolve("even");
+      }, 1000);
+    }
+
+    setTimeout(() => {
+      return resolve("odd");
+    }, 2000);
+  });
+}
+checkValue(value).then(console.log).catch(console.log);
