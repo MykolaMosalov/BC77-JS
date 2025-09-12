@@ -18,10 +18,38 @@ function getImagesByQuery(q) {
     return res.json();
   });
 }
-getImagesByQuery("car")
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+
+const formEl = document.querySelector("form");
+const ulEl = document.querySelector(".gallery-list");
+// console.log(formEl);
+
+formEl.addEventListener("submit", onSubmit);
+
+function onSubmit(event) {
+  event.preventDefault();
+  const inputQuerry = event.currentTarget.elements["search-text"].value.trim();
+
+  getImagesByQuery(inputQuerry)
+    .then((response) => {
+      const photosArray = response.hits;
+      ulEl.innerHTML = renderGallery(photosArray);
+      console.log(photosArray);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(() => {
+      formEl.reset();
+    });
+}
+
+function renderGallery(array = []) {
+  return array
+    .map(
+      ({ webformatURL, tags }) =>
+        ` <li>
+        <img src="${webformatURL}" alt="${tags}">
+      </li>`
+    )
+    .join("");
+}
